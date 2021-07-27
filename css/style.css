@@ -298,10 +298,27 @@ ul {
   padding-right: 5px;
   padding-right: calc(5px + 0 * ((100vw - 320px) / 1600));
   border-bottom: 1px solid transparent;
-  transition: border-bottom-color 0.2s ease-in-out;
+  position: relative;
 }
-.menu__list-item:hover, .menu__list-item:active, .menu__list-item.active {
-  border-bottom-color: #FFFFFF;
+.menu__list-item:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  margin-bottom: -5px;
+  background: #FCFCFC;
+  height: 1px;
+  opacity: 0;
+  transition-property: left, right, opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.menu__list-item:hover:before {
+  left: 0;
+  right: 0;
+  opacity: 1;
 }
 .menu__link {
   color: #FFFFFF;

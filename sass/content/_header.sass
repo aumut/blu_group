@@ -40,9 +40,27 @@
       +adaptiv-value("padding-left", $pl_menuItem, $pl_menuItem_mob, 2)
       +adaptiv-value("padding-right", $pl_menuItem, $pl_menuItem_mob, 2)
       border-bottom: 1px solid transparent
-      transition: border-bottom-color 0.2s ease-in-out
-      &:hover, &:active, &.active
-        border-bottom-color: $fc_body
+      position: relative
+
+      &:before
+        content: ""
+        position: absolute
+        z-index: -1
+        left: 51%
+        right: 51%
+        bottom: 0
+        margin-bottom: -5px
+        background: #FCFCFC
+        height: 1px
+        opacity: 0
+        transition-property: left,right,opacity
+        transition-duration: 0.3s
+        transition-timing-function: ease-out
+      &:hover
+        &:before
+          left: 0
+          right: 0
+          opacity: 1
 
   &__link
     color: $fc_body
