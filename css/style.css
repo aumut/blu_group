@@ -386,6 +386,18 @@ ul {
   min-height: 75px;
 }
 
+.danger-msg {
+  display: inline-block;
+  font-size: 14px;
+  font-size: calc(8px + 6 * ((100vw - 320px) / 1600));
+  color: red;
+}
+
+.danger-field {
+  border-color: red;
+  color: red;
+}
+
 .about {
   display: flex;
   align-items: center;
