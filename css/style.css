@@ -357,6 +357,10 @@ ul {
   border: 0.5px solid #FFFFFF;
   color: #FFFFFF;
 }
+.form-field--danger {
+  border-color: red;
+  color: red;
+}
 
 .field-label {
   display: inline-block;
@@ -386,16 +390,18 @@ ul {
   min-height: 75px;
 }
 
-.danger-msg {
+.msg {
   display: inline-block;
   font-size: 14px;
   font-size: calc(8px + 6 * ((100vw - 320px) / 1600));
+}
+
+.msg--danger {
   color: red;
 }
 
-.danger-field {
-  border-color: red;
-  color: red;
+.msg--success {
+  color: green;
 }
 
 .about {

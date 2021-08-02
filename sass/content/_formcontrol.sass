@@ -25,6 +25,9 @@
   padding: 8px 10px
   border: 0.5px solid #FFFFFF
   color: $fc_body
+  &--danger
+    border-color: red
+    color: red
 
 .field-label
   display: inline-block
@@ -45,11 +48,13 @@
 .form-field-msg
   min-height: 75px
 
-.danger-msg
+.msg
   display: inline-block
   +adaptiv-value("font-size", 14, 8, 2)
+
+.msg--danger
   color: red
 
-.danger-field
-  border-color: red
-  color: red
+.msg--success
+  color: green
+
