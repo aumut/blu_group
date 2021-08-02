@@ -28,6 +28,9 @@
   &--danger
     border-color: red
     color: red
+  &--success
+    border-color: green
+    color: green
 
 .field-label
   display: inline-block
@@ -51,10 +54,8 @@
 .msg
   display: inline-block
   +adaptiv-value("font-size", 14, 8, 2)
-
-.msg--danger
-  color: red
-
-.msg--success
-  color: green
+  &--danger
+    color: red
+  &--success
+    color: green
 

@@ -361,6 +361,10 @@ ul {
   border-color: red;
   color: red;
 }
+.form-field--success {
+  border-color: green;
+  color: green;
+}
 
 .field-label {
   display: inline-block;
@@ -395,11 +399,9 @@ ul {
   font-size: 14px;
   font-size: calc(8px + 6 * ((100vw - 320px) / 1600));
 }
-
 .msg--danger {
   color: red;
 }
-
 .msg--success {
   color: green;
 }
