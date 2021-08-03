@@ -397,8 +397,8 @@ ul {
 
 .msg {
   display: inline-block;
-  font-size: 14px;
-  font-size: calc(8px + 6 * ((100vw - 320px) / 1600));
+  font-size: 8px;
+  font-size: calc(6px + 2 * ((100vw - 320px) / 1600));
 }
 .msg--danger {
   color: red;
