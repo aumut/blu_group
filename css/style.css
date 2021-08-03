@@ -613,6 +613,67 @@ ul {
   margin-bottom: calc(10px + 10 * ((100vw - 320px) / 1600));
 }
 
+.admin-page {
+  display: flex;
+  height: 100vh;
+}
+.admin-page .content {
+  background-color: #E5E5E5;
+  flex-grow: 1;
+}
+
+.sidebar {
+  width: 350px;
+  width: calc(250px + 100 * ((100vw - 320px) / 1600));
+  min-width: 350px;
+  min-width: calc(250px + 100 * ((100vw - 320px) / 1600));
+}
+.sidebar__inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 30px 40px;
+}
+.sidebar .logo {
+  margin-bottom: 50px;
+}
+.sidebar .menu__list {
+  flex-direction: column;
+}
+.sidebar .menu__list-sub {
+  padding-left: 30px;
+  list-style: disc;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+.sidebar .menu__list-sub .menu__list-item {
+  position: relative;
+  align-items: center;
+}
+.sidebar .menu__list-sub .menu__list-item:after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  display: inline-flex;
+  position: absolute;
+  left: -15px;
+}
+.sidebar .menu__list-item {
+  display: inline-flex;
+}
+.sidebar .menu__list-item:hover > .menu__list-sub {
+  display: flex;
+}
+.sidebar .footer {
+  position: static;
+  margin-top: auto;
+}
+
 .footer {
   font-size: 10px;
   font-size: calc(8px + 2 * ((100vw - 320px) / 1600));
