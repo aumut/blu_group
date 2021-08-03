@@ -27,14 +27,13 @@ $w_menu_mob: 250
   .menu__list-sub
     padding-left: 30px
     list-style: disc
-    position: absolute
-    top: 38px
-    left: 0
     width: 100%
     display: none
+    margin: 10px 0 0
     .menu__list-item
       position: relative
-      align-items: center
+      justify-content: center
+      align-items: flex-start
       &:after
         content: ''
         width: 4px
@@ -47,6 +46,7 @@ $w_menu_mob: 250
 
   .menu__list-item
     display: inline-flex
+    flex-direction: column
     &:hover>.menu__list-sub
       display: flex
 

@@ -300,7 +300,19 @@ ul {
   border-bottom: 1px solid transparent;
   position: relative;
 }
-.menu__list-item:before {
+.menu__list-item:hover > .menu__link:before {
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+.menu__link {
+  color: #FFFFFF;
+  display: flex;
+  font-size: 20px;
+  font-size: calc(12px + 8 * ((100vw - 320px) / 1600));
+  position: relative;
+}
+.menu__link:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -314,17 +326,6 @@ ul {
   transition-property: left, right, opacity;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
-}
-.menu__list-item:hover:before {
-  left: 0;
-  right: 0;
-  opacity: 1;
-}
-.menu__link {
-  color: #FFFFFF;
-  display: flex;
-  font-size: 20px;
-  font-size: calc(12px + 8 * ((100vw - 320px) / 1600));
 }
 
 .btn {
@@ -643,15 +644,14 @@ ul {
 .sidebar .menu__list-sub {
   padding-left: 30px;
   list-style: disc;
-  position: absolute;
-  top: 38px;
-  left: 0;
   width: 100%;
   display: none;
+  margin: 10px 0 0;
 }
 .sidebar .menu__list-sub .menu__list-item {
   position: relative;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
 }
 .sidebar .menu__list-sub .menu__list-item:after {
   content: "";
@@ -665,6 +665,7 @@ ul {
 }
 .sidebar .menu__list-item {
   display: inline-flex;
+  flex-direction: column;
 }
 .sidebar .menu__list-item:hover > .menu__list-sub {
   display: flex;
